@@ -1,5 +1,6 @@
 import './App.css';
 import map from "./img/map-v3-big.jpg";
+import './main.scss';
 
 function App() {
   return (
