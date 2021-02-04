@@ -11,4 +11,4 @@ test('renders map', () => {
   render(<App />);
   const map = screen.getByAltText('map');
   expect(map).toBeInTheDocument();
-})
+});
