@@ -1,8 +1,17 @@
-#root {
+html {
   background-color: black;
 }
 h1 {
   margin-top: 0px;
   padding-top: 10px;
   color: white;
+}
+footer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  #github {
+    margin-left: 4px;
+  }
 }
