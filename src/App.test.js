@@ -1,14 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders new title', () => {
+test('renders main page', () => {
   render(<App />);
   const element = screen.getByText("The Isle Map");
   expect(element).toBeInTheDocument();
-});
-
-test('renders map', () => {
-  render(<App />);
   const map = screen.getByAltText('map');
   expect(map).toBeInTheDocument();
 });
