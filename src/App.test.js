@@ -7,4 +7,10 @@ test('renders main page', () => {
   expect(element).toBeInTheDocument();
   const map = screen.getByAltText('map');
   expect(map).toBeInTheDocument();
-});
+})
+test('Coordinates conditions', () => {
+  const coordX = screen.getByText("x coords");
+  const coordY = screen.getByText("y coords");
+  expect(coordX).not.toBeInTheDocument();
+  expect(coordY).not.toBeInTheDocument();
+})
