@@ -1,11 +1,7 @@
-import { useEffect } from 'react';
 import mapImg from '../img/map-v3-big.jpg';
 
 function Map (props) {
-
-  useEffect(() => {
-
-  },[])
+  const mouse = new MouseEvent('click');
   const coordTracker = () => {
     if (props.coords.x || props.coords.y ) {
       return (
@@ -15,11 +11,13 @@ function Map (props) {
         </div>
       )
     }
-  }
+  };
 
   return (
     <>
-    <img alt="map" src={mapImg} width="60%" onClick={() => props.setCoords({x: MouseEvent.pageX, y: MouseEvent.pageY})} ></img>
+    <img alt="map" src={mapImg} width="60%" onClick={() => {
+      props.setCoords({x: mouse.pageX, y: mouse.pageY})
+      }} ></img>
     {coordTracker()}
     </>
   )
