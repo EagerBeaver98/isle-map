@@ -1,8 +1,8 @@
 import mapImg from '../img/map-v3-big.jpg';
 
 function Map (props) {
-  const mouse = new MouseEvent('click');
   const coordTracker = () => {
+    const map = document.getElementById('map');
     if (props.coords.x || props.coords.y ) {
       return (
         <div className="coords">
@@ -13,10 +13,12 @@ function Map (props) {
     }
   };
 
+
   return (
     <>
-    <img alt="map" src={mapImg} width="60%" onClick={() => {
-      props.setCoords({x: mouse.pageX, y: mouse.pageY})
+    <img id="map" alt="map" src={mapImg} width="60%" onClick={() => {
+      props.setCoords({x: 1, y: 1})
+      console.log(document.getElementById("map"))
       }} ></img>
     {coordTracker()}
     </>
