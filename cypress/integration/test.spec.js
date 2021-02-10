@@ -10,11 +10,11 @@ describe('Loads page', () => {
   });
 });
 describe('Coordinate Conditional Checks', () => {
-  it('Does not load coords before click', () => {
+  it('Does not load coords before hover', () => {
     cy.get('.coords').should('not.exist');
   });
-  it('Loads coords after click', () => {
-    cy.get("[alt='map']").click();
+  it('Loads coords after hover', () => {
+    cy.get("[alt='map']").trigger('mouseover');
     cy.get('.coords').should('exist');
   })
 })
