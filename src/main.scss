@@ -1,8 +1,14 @@
-#root {
+html {
   background-color: black;
+  color: white;
 }
 h1 {
   margin-top: 0px;
   padding-top: 10px;
-  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
 }
