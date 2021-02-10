@@ -7,14 +7,14 @@ function Map () {
   const mouse = useMouse(target);
 
   const coordinates = () => {
-    if (mouse.x || mouse.y) {
+    if (mouse.isOver) {
       return (
         <div className="coords">
       <div>
-        X: {mouse.x}
+        X: {mouse.x} {/* x top left -824 y - 724 */}
       </div>
       <div>
-        Y: {mouse.y}
+        Y: {Math.floor(mouse.y)}
       </div>
     </div>
       )
@@ -23,7 +23,7 @@ function Map () {
 
   return (
     <>
-    <img ref={target} id="map" alt="map" src={mapImg} width="60%"></img>
+    <img ref={target} id="map" alt="map" src={mapImg} width="500px"></img>
     {coordinates()}
     </>
   )
