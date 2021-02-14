@@ -11,7 +11,7 @@ function Map () {
       return (
         <div className="coords">
       <div>
-        X: {mouse.x} {/* x top left -824 y - 724 */}
+        X: {Math.floor(mouse.x)} {/* x top left -824 y 724 */}
       </div>
       <div>
         Y: {Math.floor(mouse.y)}
@@ -23,7 +23,7 @@ function Map () {
 
   return (
     <>
-    <img ref={target} id="map" alt="map" src={mapImg} width="500px"></img>
+    <img ref={target} id="map" alt="map" src={mapImg} width="800px"></img>
     {coordinates()}
     </>
   )
